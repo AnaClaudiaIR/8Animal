@@ -2,14 +2,15 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Animal[] animales = new Animal[3]; //Crear array--> Polimorfismo
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        //Crear los objetos dentro del array
+        animales[0] = new Perro();
+        animales[1] = new Gato();
+        animales[2] = new Animal();
+
+        for (Animal n:animales){ //Recorre el array asignando la variable 'n' a cada elemento para que lo recorra --> Array fue declarado con 'Animal'
+            n.hacerSonido();
         }
     }
 }

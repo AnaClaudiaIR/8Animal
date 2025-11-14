@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
-
-public class Gato {
+public class Gato extends Animal{
+    @Override
+    public void hacerSonido(){
+        System.out.println("¡Miau Miau!");
+    }
 }
